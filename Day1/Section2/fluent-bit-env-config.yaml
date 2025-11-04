@@ -1,0 +1,12 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: fluent-bit-env-config
+  namespace: fluent-bit
+  labels:
+    k8s-app: fluent-bit
+data:
+  CLUSTERNAME: kustomize-it
+  FLUENT_ELASTICSEARCH_HOST: kustomize-it
+  FLUENT_ELASTICSEARCH_PORT: "9200"
